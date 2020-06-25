@@ -1,0 +1,24 @@
+﻿@model ProductFormVM
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit" asp-controller="Product" enctype="multipart/form-data">
+            <input type="hidden" asp-for="Product.Id" />
+            <input type="hidden" asp-for="Product.Thumb" />
+            <partial name="~/Views/Product/ProductFormHelper.cshtml" model="Model" />
+            <img src="/@Model.Product.Thumb" width="100" />
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="ProductList">Back to List</a>
+</div>

@@ -1,0 +1,20 @@
+﻿@model ProductFormVM
+
+<div asp-validation-summary="ModelOnly" class="text-danger"></div>
+<div class="form-group">
+    <label asp-for="Product.Name" class="control-label"></label>
+    <input asp-for="Product.Name" class="form-control" />
+    <span asp-validation-for="Product.Name" class="text-danger"></span>
+</div>
+
+<div class="form-group">
+    <label asp-for="Product.Manufacturer" class="control-label"></label>
+    <input asp-for="Product.Manufacturer" class="form-control" />
+    <span asp-validation-for="Product.Manufacturer" class="text-danger"></span>
+</div>
+
+<div class="form-group">
+    <label asp-for="Product.file" class="control-label"></label>
+    <input asp-for="Product.file" type="file" class="form-control" />
+    <span asp-validation-for="Product.file" class="text-danger"></span>
+</div>

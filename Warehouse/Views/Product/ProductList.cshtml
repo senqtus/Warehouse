@@ -1,0 +1,52 @@
+﻿@using X.PagedList.Mvc.Core;
+@model ProductListVM
+@{
+    ViewData["Title"] = "ProductList";
+}
+
+<div class="form-group">
+
+    <a asp-action="Add" asp-controller="Product" class="btn btn-success  mt-3">Add</a>
+</div>
+<div class="form-group">
+    <form class="form-inline my-2 my-lg-0" method="get" asp-action="Search" asp-controller="Product">
+
+        <select class="custom-select-sm form-control" name="property">
+            <option>Name</option>
+            <option>Manufacturer</option>
+        </select>
+
+        <input class="form-control mr-sm-2 ml-2" type="search" placeholder="საძიებო სიტყვა" aria-label="ძებნა" name="value">
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">ძებნა</button>
+    </form>
+</div>
+
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">სურათი</th>
+            <th scope="col">სახელი</th>
+            <th scope="col">მწარმოებელი</th>
+            <th scope="col"></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.Products)
+        {
+            <tr>
+                <th scope="row">@item.Id</th>
+                <td><img height="50" src="/@item.Thumb" /></td>
+                <td>@item.Name</td>
+                <td>@item.Manufacturer</td>
+                <td>
+                    <a asp-action="Edit" asp-route-Id="@item.Id" class="btn btn-warning">Edit</a>
+                    <a asp-action="Delete" asp-route-Id="@item.Id" class="btn btn-danger">Delete</a>
+                </td>
+            </tr>
+        }
+
+    </tbody>
+</table>
+
+@Html.PagedListPager((X.PagedList.IPagedList)Model.Products, page => Url.Action("ProductList", "Product", new { page }))

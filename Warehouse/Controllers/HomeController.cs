@@ -28,11 +28,9 @@ namespace Warehouse.Controllers
         }
 
 
-        public string Index()
+        public IActionResult Index()
         {
-            var model = shopOperations.GetComponents();
-            string data = JsonConvert.SerializeObject(model);
-            return data;
+            return View();
         }
 
         public IActionResult Privacy()

@@ -46,6 +46,8 @@ namespace Warehouse
                 .AddEntityFrameworkStores<StorageDBContext>()
                 .AddDefaultTokenProviders();
 
+            services.ConfigureApplicationCookie(opts => opts.LoginPath = "/Auth/Login");
+            services.ConfigureApplicationCookie(opts => opts.AccessDeniedPath = "/Auth/AccessDenied");
             services.AddScoped<IUOW, UOW>();
             services.AddScoped<IProductOperations, ProductOperations>();
             services.AddScoped<IShopOperations, ShopOperations>();
@@ -68,12 +70,18 @@ namespace Warehouse
                 app.UseHsts();
             }
 
+            app.UseAuthentication();
             app.UseHttpsRedirection();
             app.UseStaticFiles();
             app.UseCookiePolicy();
 
             app.UseMvc(routes =>
             {
+
+                routes.MapRoute(
+                    name: "search",
+                    template: "{controller=Home}/{action=Index}/{property}/{value}");
+
                 routes.MapRoute(
                     name: "default",
                     template: "{controller=Home}/{action=Index}/{id?}");

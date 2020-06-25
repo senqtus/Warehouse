@@ -1,0 +1,28 @@
+﻿@model ProductListVM
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">სურათი</th>
+            <th scope="col">სახელი</th>
+            <th scope="col">მწარმოებელი</th>
+            <th scope="col"></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.Products)
+        {
+            <tr>
+                <th scope="row">@item.Id</th>
+                <td><img height="50" src="/@item.Thumb" /></td>
+                <td>@item.Name</td>
+                <td>@item.Manufacturer</td>
+                <td>
+                    <a asp-action="Edit" asp-route-Id="@item.Id" class="btn btn-warning">Edit</a>
+                    <a asp-action="Delete" asp-route-Id="@item.Id" class="btn btn-danger">Delete</a>
+                </td>
+            </tr>
+        }
+
+    </tbody>
+</table>

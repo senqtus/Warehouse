@@ -1,0 +1,69 @@
+﻿@model ShopDetailsVM
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>@Model.Shop.Name</h2>
+
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="AddProductShop" asp-controller="Shop" enctype="multipart/form-data">
+            <input type="hidden" asp-for="ShopProduct.ShopId" value="@Model.Shop.Id" />
+
+            <div class="form-group">
+                <label asp-for="ShopProduct.ProductId" class="control-label"></label>
+                <select asp-for="ShopProduct.ProductId" asp-items="Model.Components.ProductsSelectList" class="form-control"></select>
+                <span asp-validation-for="ShopProduct.ProductId" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="ShopProduct.BarCode" class="control-label"></label>
+                <input asp-for="ShopProduct.BarCode" class="form-control" />
+                <span asp-validation-for="ShopProduct.BarCode" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="ShopProduct.Price" class="control-label"></label>
+                <input asp-for="ShopProduct.Price" class="form-control" />
+                <span asp-validation-for="ShopProduct.Price" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <input type="submit" value="Add" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">ბარკოდი</th>
+            <th scope="col">სურათი</th>
+            <th scope="col">სახელი</th>
+            <th scope="col">მწარმოებელი</th>
+            <th scope="col">ფასი</th>
+            <th scope="col"></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.Shop.Products)
+        {
+        <tr>
+            <th scope="row">@item.Id</th>
+            <td>@item.BarCode</td>
+            <td><img height="50" src="/@item.Product.Thumb" /></td>
+            <td>@item.Product.Name</td>
+            <td>@item.Product.Manufacturer</td>
+            <td>@item.Price</td>
+            <td>
+                <a asp-action="DeleteProd" asp-route-Id="@item.Id" asp-route-shop="@item.ShopId" class="btn btn-danger">Delete</a>
+            </td>
+        </tr>
+        }
+
+    </tbody>
+</table>
+

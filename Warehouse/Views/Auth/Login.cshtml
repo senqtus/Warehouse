@@ -1,0 +1,24 @@
+﻿@model BLL.DTOs.Login.LoginDTO
+@{
+    ViewData["Title"] = "Login";
+}
+
+<div class="text-danger" asp-validation-summary="All"></div>
+
+
+<form asp-action="Login">
+
+    <input type="hidden" name="returnUrl" value="@ViewBag.returnUrl" />
+
+    <div class="form-group">
+        <label asp-for="Email">ელ-ფოსტა</label>
+        <input asp-for="Email" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label asp-for="Password">პაროლი</label>
+        <input asp-for="Password" type="password" class="form-control" />
+    </div>
+
+    <button class="btn btn-primary" type="submit">ავტორიზაცია</button>
+
+</form>
