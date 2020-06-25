@@ -2,6 +2,9 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using AutoMapper;
+using BLL.Interfaces;
+using BLL.Operations;
 using DAL.Context;
 using DAL.Entities;
 using Microsoft.AspNetCore.Builder;
@@ -13,6 +16,8 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Services.Interfaces;
+using Services.Repositories;
 
 namespace Warehouse
 {
@@ -41,6 +46,10 @@ namespace Warehouse
                 .AddEntityFrameworkStores<StorageDBContext>()
                 .AddDefaultTokenProviders();
 
+            services.AddScoped<IUOW, UOW>();
+            services.AddScoped<IProductOperations, ProductOperations>();
+            services.AddScoped<IShopOperations, ShopOperations>();
+            services.AddAutoMapper(typeof(BLL.Mapping.MapProfile).Assembly);
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
         }
