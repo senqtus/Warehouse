@@ -1,0 +1,159 @@
+2020-06-26 21:43:45.0954|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/2.0 GET https://localhost:44340/  
+2020-06-26 21:43:45.1166|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'Warehouse.Controllers.HomeController.Index (Warehouse)'
+2020-06-26 21:43:45.1447|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller Warehouse.Controllers.HomeController (Warehouse).
+2020-06-26 21:43:45.1578|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executing action method Warehouse.Controllers.HomeController.Index (Warehouse) - Validation state: Valid
+2020-06-26 21:43:45.1664|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executed action method Warehouse.Controllers.HomeController.Index (Warehouse), returned result Microsoft.AspNetCore.Mvc.ViewResult in 0.0935ms.
+2020-06-26 21:43:45.2264|INFO|Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor|Executing ViewResult, running view Index.
+2020-06-26 21:43:45.2424|INFO|Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor|Executed ViewResult - view Index executed in 16.6682ms.
+2020-06-26 21:43:45.2596|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executed action Warehouse.Controllers.HomeController.Index (Warehouse) in 102.0946ms
+2020-06-26 21:43:45.2936|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'Warehouse.Controllers.HomeController.Index (Warehouse)'
+2020-06-26 21:43:45.3115|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 216.0508ms 200 text/html; charset=utf-8
+2020-06-26 21:43:47.4438|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/2.0 GET https://localhost:44340/Auth/Logout  
+2020-06-26 21:43:47.4907|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'Warehouse.Controllers.AuthController.Logout (Warehouse)'
+2020-06-26 21:43:47.5144|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Route matched with {action = "Logout", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Logout() on controller Warehouse.Controllers.AuthController (Warehouse).
+2020-06-26 21:43:47.5521|INFO|Microsoft.AspNetCore.Authorization.DefaultAuthorizationService|Authorization was successful.
+2020-06-26 21:43:47.5606|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executing action method Warehouse.Controllers.AuthController.Logout (Warehouse) - Validation state: Valid
+2020-06-26 21:43:47.5819|INFO|Microsoft.AspNetCore.Authentication.Cookies.CookieAuthenticationHandler|AuthenticationScheme: Identity.Application signed out.
+2020-06-26 21:43:47.6090|INFO|Microsoft.AspNetCore.Authentication.Cookies.CookieAuthenticationHandler|AuthenticationScheme: Identity.External signed out.
+2020-06-26 21:43:47.6178|INFO|Microsoft.AspNetCore.Authentication.Cookies.CookieAuthenticationHandler|AuthenticationScheme: Identity.TwoFactorUserId signed out.
+2020-06-26 21:43:47.6178|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executed action method Warehouse.Controllers.AuthController.Logout (Warehouse), returned result Microsoft.AspNetCore.Mvc.RedirectToActionResult in 53.3245ms.
+2020-06-26 21:43:47.6733|INFO|Microsoft.AspNetCore.Mvc.RedirectToActionResult|Executing RedirectResult, redirecting to /Auth/Login.
+2020-06-26 21:43:47.7508|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executed action Warehouse.Controllers.AuthController.Logout (Warehouse) in 213.0942ms
+2020-06-26 21:43:47.7649|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'Warehouse.Controllers.AuthController.Logout (Warehouse)'
+2020-06-26 21:43:47.7776|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 333.8722ms 302 
+2020-06-26 21:43:47.7776|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/2.0 GET https://localhost:44340/Auth/Login  
+2020-06-26 21:43:47.8473|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'Warehouse.Controllers.AuthController.Login (Warehouse)'
+2020-06-26 21:43:47.8742|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login(System.String) on controller Warehouse.Controllers.AuthController (Warehouse).
+2020-06-26 21:43:47.8967|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executing action method Warehouse.Controllers.AuthController.Login (Warehouse) - Validation state: Valid
+2020-06-26 21:43:48.0464|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executed action method Warehouse.Controllers.AuthController.Login (Warehouse), returned result Microsoft.AspNetCore.Mvc.ViewResult in 138.9452ms.
+2020-06-26 21:43:48.0864|INFO|Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor|Executing ViewResult, running view Login.
+2020-06-26 21:43:48.1701|INFO|Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor|Executed ViewResult - view Login executed in 88.1129ms.
+2020-06-26 21:43:48.1849|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executed action Warehouse.Controllers.AuthController.Login (Warehouse) in 301.2828ms
+2020-06-26 21:43:48.2071|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'Warehouse.Controllers.AuthController.Login (Warehouse)'
+2020-06-26 21:43:48.2201|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 437.3844ms 200 text/html; charset=utf-8
+2020-06-26 21:43:52.2916|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/2.0 POST https://localhost:44340/Auth/Login application/x-www-form-urlencoded 232
+2020-06-26 21:43:52.3092|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'Warehouse.Controllers.AuthController.Login (Warehouse)'
+2020-06-26 21:43:52.3330|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(BLL.DTOs.Login.LoginDTO, System.String) on controller Warehouse.Controllers.AuthController (Warehouse).
+2020-06-26 21:43:52.3839|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executing action method Warehouse.Controllers.AuthController.Login (Warehouse) - Validation state: Valid
+2020-06-26 21:43:52.6439|INFO|Microsoft.EntityFrameworkCore.Infrastructure|Entity Framework Core 2.2.6-servicing-10079 initialized 'StorageDBContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2020-06-26 21:43:54.2354|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (88ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[AccessFailedCount], [u].[ConcurrencyStamp], [u].[Email], [u].[EmailConfirmed], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[PasswordHash], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[SecurityStamp], [u].[TwoFactorEnabled], [u].[UserName]
+FROM [AspNetUsers] AS [u]
+WHERE [u].[NormalizedEmail] = @__normalizedEmail_0
+2020-06-26 21:43:54.2855|INFO|Microsoft.AspNetCore.Authentication.Cookies.CookieAuthenticationHandler|AuthenticationScheme: Identity.Application signed out.
+2020-06-26 21:43:54.2938|INFO|Microsoft.AspNetCore.Authentication.Cookies.CookieAuthenticationHandler|AuthenticationScheme: Identity.External signed out.
+2020-06-26 21:43:54.2938|INFO|Microsoft.AspNetCore.Authentication.Cookies.CookieAuthenticationHandler|AuthenticationScheme: Identity.TwoFactorUserId signed out.
+2020-06-26 21:43:54.4316|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (26ms) [Parameters=[@__user_Id_0='?' (Size = 450)], CommandType='Text', CommandTimeout='30']
+SELECT [uc].[Id], [uc].[ClaimType], [uc].[ClaimValue], [uc].[UserId]
+FROM [AspNetUserClaims] AS [uc]
+WHERE [uc].[UserId] = @__user_Id_0
+2020-06-26 21:43:54.5268|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (27ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='Text', CommandTimeout='30']
+SELECT [role].[Name]
+FROM [AspNetUserRoles] AS [userRole]
+INNER JOIN [AspNetRoles] AS [role] ON [userRole].[RoleId] = [role].[Id]
+WHERE [userRole].[UserId] = @__userId_0
+2020-06-26 21:43:54.6026|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (4ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [r].[Id], [r].[ConcurrencyStamp], [r].[Name], [r].[NormalizedName]
+FROM [AspNetRoles] AS [r]
+WHERE [r].[NormalizedName] = @__normalizedName_0
+2020-06-26 21:43:54.6512|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (4ms) [Parameters=[@__role_Id_0='?' (Size = 450)], CommandType='Text', CommandTimeout='30']
+SELECT [rc].[ClaimType], [rc].[ClaimValue]
+FROM [AspNetRoleClaims] AS [rc]
+WHERE [rc].[RoleId] = @__role_Id_0
+2020-06-26 21:43:54.6852|INFO|Microsoft.AspNetCore.Authentication.Cookies.CookieAuthenticationHandler|AuthenticationScheme: Identity.Application signed in.
+2020-06-26 21:43:54.7041|INFO|Warehouse.Controllers.AuthController|The Admin Signed In
+2020-06-26 21:43:54.7256|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executed action method Warehouse.Controllers.AuthController.Login (Warehouse), returned result Microsoft.AspNetCore.Mvc.RedirectResult in 2330.5525ms.
+2020-06-26 21:43:54.7480|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.RedirectResultExecutor|Executing RedirectResult, redirecting to /.
+2020-06-26 21:43:54.7480|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executed action Warehouse.Controllers.AuthController.Login (Warehouse) in 2413.1533ms
+2020-06-26 21:43:54.7679|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'Warehouse.Controllers.AuthController.Login (Warehouse)'
+2020-06-26 21:43:54.7821|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 2490.5498ms 302 
+2020-06-26 21:43:54.7821|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/2.0 GET https://localhost:44340/  
+2020-06-26 21:43:54.8018|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'Warehouse.Controllers.HomeController.Index (Warehouse)'
+2020-06-26 21:43:54.8123|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller Warehouse.Controllers.HomeController (Warehouse).
+2020-06-26 21:43:54.8207|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executing action method Warehouse.Controllers.HomeController.Index (Warehouse) - Validation state: Valid
+2020-06-26 21:43:54.8207|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executed action method Warehouse.Controllers.HomeController.Index (Warehouse), returned result Microsoft.AspNetCore.Mvc.ViewResult in 0.0235ms.
+2020-06-26 21:43:54.8460|INFO|Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor|Executing ViewResult, running view Index.
+2020-06-26 21:43:54.8613|INFO|Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor|Executed ViewResult - view Index executed in 15.3379ms.
+2020-06-26 21:43:54.9076|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executed action Warehouse.Controllers.HomeController.Index (Warehouse) in 86.9753ms
+2020-06-26 21:43:54.9298|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'Warehouse.Controllers.HomeController.Index (Warehouse)'
+2020-06-26 21:43:54.9488|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 161.8905ms 200 text/html; charset=utf-8
+2020-06-26 21:44:32.5313|INFO|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|User profile is available. Using 'C:\Users\Salome\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2020-06-26 21:44:32.8908|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/2.0 GET https://localhost:44340/  
+2020-06-26 21:44:33.3811|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'Warehouse.Controllers.HomeController.Index (Warehouse)'
+2020-06-26 21:44:33.4032|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller Warehouse.Controllers.HomeController (Warehouse).
+2020-06-26 21:44:33.7938|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executing action method Warehouse.Controllers.HomeController.Index (Warehouse) - Validation state: Valid
+2020-06-26 21:44:33.8256|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executed action method Warehouse.Controllers.HomeController.Index (Warehouse), returned result Microsoft.AspNetCore.Mvc.ViewResult in 0.9004ms.
+2020-06-26 21:44:33.8846|INFO|Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor|Executing ViewResult, running view Index.
+2020-06-26 21:44:34.0410|INFO|Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor|Executed ViewResult - view Index executed in 179.9086ms.
+2020-06-26 21:44:34.0551|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executed action Warehouse.Controllers.HomeController.Index (Warehouse) in 642.8416ms
+2020-06-26 21:44:34.0908|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'Warehouse.Controllers.HomeController.Index (Warehouse)'
+2020-06-26 21:44:34.1161|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 1225.1919ms 200 text/html; charset=utf-8
+2020-06-26 21:44:36.8875|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/2.0 GET https://localhost:44340/Auth/Logout  
+2020-06-26 21:44:36.9110|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'Warehouse.Controllers.AuthController.Logout (Warehouse)'
+2020-06-26 21:44:36.9532|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Route matched with {action = "Logout", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Logout() on controller Warehouse.Controllers.AuthController (Warehouse).
+2020-06-26 21:44:36.9820|INFO|Microsoft.AspNetCore.Authorization.DefaultAuthorizationService|Authorization was successful.
+2020-06-26 21:44:36.9948|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executing action method Warehouse.Controllers.AuthController.Logout (Warehouse) - Validation state: Valid
+2020-06-26 21:44:37.0145|INFO|Microsoft.AspNetCore.Authentication.Cookies.CookieAuthenticationHandler|AuthenticationScheme: Identity.Application signed out.
+2020-06-26 21:44:37.0258|INFO|Microsoft.AspNetCore.Authentication.Cookies.CookieAuthenticationHandler|AuthenticationScheme: Identity.External signed out.
+2020-06-26 21:44:37.0398|INFO|Microsoft.AspNetCore.Authentication.Cookies.CookieAuthenticationHandler|AuthenticationScheme: Identity.TwoFactorUserId signed out.
+2020-06-26 21:44:37.0398|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executed action method Warehouse.Controllers.AuthController.Logout (Warehouse), returned result Microsoft.AspNetCore.Mvc.RedirectToActionResult in 44.2637ms.
+2020-06-26 21:44:37.0590|INFO|Microsoft.AspNetCore.Mvc.RedirectToActionResult|Executing RedirectResult, redirecting to /Auth/Login.
+2020-06-26 21:44:37.0590|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executed action Warehouse.Controllers.AuthController.Logout (Warehouse) in 101.5601ms
+2020-06-26 21:44:37.0768|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'Warehouse.Controllers.AuthController.Logout (Warehouse)'
+2020-06-26 21:44:37.0892|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 201.6223ms 302 
+2020-06-26 21:44:37.0892|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/2.0 GET https://localhost:44340/Auth/Login  
+2020-06-26 21:44:37.1113|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'Warehouse.Controllers.AuthController.Login (Warehouse)'
+2020-06-26 21:44:37.1341|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login(System.String) on controller Warehouse.Controllers.AuthController (Warehouse).
+2020-06-26 21:44:37.1541|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executing action method Warehouse.Controllers.AuthController.Login (Warehouse) - Validation state: Valid
+2020-06-26 21:44:37.2061|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executed action method Warehouse.Controllers.AuthController.Login (Warehouse), returned result Microsoft.AspNetCore.Mvc.ViewResult in 41.4471ms.
+2020-06-26 21:44:37.2174|INFO|Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor|Executing ViewResult, running view Login.
+2020-06-26 21:44:37.2927|INFO|Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor|Executed ViewResult - view Login executed in 77.0653ms.
+2020-06-26 21:44:37.3088|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executed action Warehouse.Controllers.AuthController.Login (Warehouse) in 166.5267ms
+2020-06-26 21:44:37.3333|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'Warehouse.Controllers.AuthController.Login (Warehouse)'
+2020-06-26 21:44:37.3494|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 255.2935ms 200 text/html; charset=utf-8
+2020-06-26 21:44:41.3190|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/2.0 POST https://localhost:44340/Auth/Login application/x-www-form-urlencoded 232
+2020-06-26 21:44:41.3356|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'Warehouse.Controllers.AuthController.Login (Warehouse)'
+2020-06-26 21:44:41.3630|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(BLL.DTOs.Login.LoginDTO, System.String) on controller Warehouse.Controllers.AuthController (Warehouse).
+2020-06-26 21:44:41.4161|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executing action method Warehouse.Controllers.AuthController.Login (Warehouse) - Validation state: Valid
+2020-06-26 21:44:41.6793|INFO|Microsoft.EntityFrameworkCore.Infrastructure|Entity Framework Core 2.2.6-servicing-10079 initialized 'StorageDBContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2020-06-26 21:44:42.6828|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (121ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[AccessFailedCount], [u].[ConcurrencyStamp], [u].[Email], [u].[EmailConfirmed], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[PasswordHash], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[SecurityStamp], [u].[TwoFactorEnabled], [u].[UserName]
+FROM [AspNetUsers] AS [u]
+WHERE [u].[NormalizedEmail] = @__normalizedEmail_0
+2020-06-26 21:44:42.7433|INFO|Microsoft.AspNetCore.Authentication.Cookies.CookieAuthenticationHandler|AuthenticationScheme: Identity.Application signed out.
+2020-06-26 21:44:42.7433|INFO|Microsoft.AspNetCore.Authentication.Cookies.CookieAuthenticationHandler|AuthenticationScheme: Identity.External signed out.
+2020-06-26 21:44:42.7664|INFO|Microsoft.AspNetCore.Authentication.Cookies.CookieAuthenticationHandler|AuthenticationScheme: Identity.TwoFactorUserId signed out.
+2020-06-26 21:44:42.8868|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (36ms) [Parameters=[@__user_Id_0='?' (Size = 450)], CommandType='Text', CommandTimeout='30']
+SELECT [uc].[Id], [uc].[ClaimType], [uc].[ClaimValue], [uc].[UserId]
+FROM [AspNetUserClaims] AS [uc]
+WHERE [uc].[UserId] = @__user_Id_0
+2020-06-26 21:44:42.9980|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (34ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='Text', CommandTimeout='30']
+SELECT [role].[Name]
+FROM [AspNetUserRoles] AS [userRole]
+INNER JOIN [AspNetRoles] AS [role] ON [userRole].[RoleId] = [role].[Id]
+WHERE [userRole].[UserId] = @__userId_0
+2020-06-26 21:44:43.0267|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (3ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [r].[Id], [r].[ConcurrencyStamp], [r].[Name], [r].[NormalizedName]
+FROM [AspNetRoles] AS [r]
+WHERE [r].[NormalizedName] = @__normalizedName_0
+2020-06-26 21:44:43.0511|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (2ms) [Parameters=[@__role_Id_0='?' (Size = 450)], CommandType='Text', CommandTimeout='30']
+SELECT [rc].[ClaimType], [rc].[ClaimValue]
+FROM [AspNetRoleClaims] AS [rc]
+WHERE [rc].[RoleId] = @__role_Id_0
+2020-06-26 21:44:43.0781|INFO|Microsoft.AspNetCore.Authentication.Cookies.CookieAuthenticationHandler|AuthenticationScheme: Identity.Application signed in.
+2020-06-26 21:44:43.0896|INFO|Warehouse.Controllers.AuthController|The Admin Signed In
+2020-06-26 21:44:43.1022|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executed action method Warehouse.Controllers.AuthController.Login (Warehouse), returned result Microsoft.AspNetCore.Mvc.RedirectResult in 1675.0167ms.
+2020-06-26 21:44:43.1022|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.RedirectResultExecutor|Executing RedirectResult, redirecting to /.
+2020-06-26 21:44:43.1308|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executed action Warehouse.Controllers.AuthController.Login (Warehouse) in 1752.9915ms
+2020-06-26 21:44:43.1419|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'Warehouse.Controllers.AuthController.Login (Warehouse)'
+2020-06-26 21:44:43.1551|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 1836.2801ms 302 
+2020-06-26 21:44:43.1779|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/2.0 GET https://localhost:44340/  
+2020-06-26 21:44:43.1878|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'Warehouse.Controllers.HomeController.Index (Warehouse)'
+2020-06-26 21:44:43.1969|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller Warehouse.Controllers.HomeController (Warehouse).
+2020-06-26 21:44:43.1969|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executing action method Warehouse.Controllers.HomeController.Index (Warehouse) - Validation state: Valid
+2020-06-26 21:44:43.2186|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executed action method Warehouse.Controllers.HomeController.Index (Warehouse), returned result Microsoft.AspNetCore.Mvc.ViewResult in 0.0429ms.
+2020-06-26 21:44:43.2318|INFO|Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor|Executing ViewResult, running view Index.
+2020-06-26 21:44:43.2432|INFO|Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor|Executed ViewResult - view Index executed in 11.5603ms.
+2020-06-26 21:44:43.2589|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executed action Warehouse.Controllers.HomeController.Index (Warehouse) in 53.4361ms
+2020-06-26 21:44:43.2944|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'Warehouse.Controllers.HomeController.Index (Warehouse)'
+2020-06-26 21:44:43.3187|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 140.8925ms 200 text/html; charset=utf-8
