@@ -30,7 +30,7 @@ namespace BLL.Operations
 
         public void Delete(int Id)
         {
-            Product dbModel = services.Product.Get(Id);
+            Product dbModel = services.Product.GetProductWithShops(Id);
             if(dbModel == null)
             {
                 throw new Exception("Object not found");

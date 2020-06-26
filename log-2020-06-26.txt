@@ -157,3 +157,520 @@ WHERE [rc].[RoleId] = @__role_Id_0
 2020-06-26 21:44:43.2589|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executed action Warehouse.Controllers.HomeController.Index (Warehouse) in 53.4361ms
 2020-06-26 21:44:43.2944|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'Warehouse.Controllers.HomeController.Index (Warehouse)'
 2020-06-26 21:44:43.3187|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 140.8925ms 200 text/html; charset=utf-8
+2020-06-26 22:19:23.9139|INFO|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|User profile is available. Using 'C:\Users\Salome\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2020-06-26 22:19:24.7384|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/2.0 GET https://localhost:44340/  
+2020-06-26 22:19:25.8006|INFO|Microsoft.EntityFrameworkCore.Infrastructure|Entity Framework Core 2.2.6-servicing-10079 initialized 'StorageDBContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2020-06-26 22:19:26.9418|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (207ms) [Parameters=[@__get_Item_0='?' (Size = 450)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [e].[Id], [e].[AccessFailedCount], [e].[ConcurrencyStamp], [e].[Email], [e].[EmailConfirmed], [e].[LockoutEnabled], [e].[LockoutEnd], [e].[NormalizedEmail], [e].[NormalizedUserName], [e].[PasswordHash], [e].[PhoneNumber], [e].[PhoneNumberConfirmed], [e].[SecurityStamp], [e].[TwoFactorEnabled], [e].[UserName]
+FROM [AspNetUsers] AS [e]
+WHERE [e].[Id] = @__get_Item_0
+2020-06-26 22:19:27.2384|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (21ms) [Parameters=[@__user_Id_0='?' (Size = 450)], CommandType='Text', CommandTimeout='30']
+SELECT [uc].[Id], [uc].[ClaimType], [uc].[ClaimValue], [uc].[UserId]
+FROM [AspNetUserClaims] AS [uc]
+WHERE [uc].[UserId] = @__user_Id_0
+2020-06-26 22:19:27.2863|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (5ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='Text', CommandTimeout='30']
+SELECT [role].[Name]
+FROM [AspNetUserRoles] AS [userRole]
+INNER JOIN [AspNetRoles] AS [role] ON [userRole].[RoleId] = [role].[Id]
+WHERE [userRole].[UserId] = @__userId_0
+2020-06-26 22:19:27.3111|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (2ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [r].[Id], [r].[ConcurrencyStamp], [r].[Name], [r].[NormalizedName]
+FROM [AspNetRoles] AS [r]
+WHERE [r].[NormalizedName] = @__normalizedName_0
+2020-06-26 22:19:27.3379|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (2ms) [Parameters=[@__role_Id_0='?' (Size = 450)], CommandType='Text', CommandTimeout='30']
+SELECT [rc].[ClaimType], [rc].[ClaimValue]
+FROM [AspNetRoleClaims] AS [rc]
+WHERE [rc].[RoleId] = @__role_Id_0
+2020-06-26 22:19:27.4698|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'Warehouse.Controllers.HomeController.Index (Warehouse)'
+2020-06-26 22:19:27.5059|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller Warehouse.Controllers.HomeController (Warehouse).
+2020-06-26 22:19:28.0971|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executing action method Warehouse.Controllers.HomeController.Index (Warehouse) - Validation state: Valid
+2020-06-26 22:19:28.1094|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executed action method Warehouse.Controllers.HomeController.Index (Warehouse), returned result Microsoft.AspNetCore.Mvc.ViewResult in 0.4986ms.
+2020-06-26 22:19:28.1989|INFO|Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor|Executing ViewResult, running view Index.
+2020-06-26 22:19:28.3968|INFO|Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor|Executed ViewResult - view Index executed in 212.0868ms.
+2020-06-26 22:19:28.4132|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executed action Warehouse.Controllers.HomeController.Index (Warehouse) in 843.5679ms
+2020-06-26 22:19:28.4290|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'Warehouse.Controllers.HomeController.Index (Warehouse)'
+2020-06-26 22:19:28.4653|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 3726.7172ms 200 text/html; charset=utf-8
+2020-06-26 22:20:21.6968|INFO|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|User profile is available. Using 'C:\Users\Salome\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2020-06-26 22:20:22.0202|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/2.0 GET https://localhost:44340/  
+2020-06-26 22:20:22.2112|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'Warehouse.Controllers.HomeController.Index (Warehouse)'
+2020-06-26 22:20:22.2321|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller Warehouse.Controllers.HomeController (Warehouse).
+2020-06-26 22:20:22.5316|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executing action method Warehouse.Controllers.HomeController.Index (Warehouse) - Validation state: Valid
+2020-06-26 22:20:22.5445|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executed action method Warehouse.Controllers.HomeController.Index (Warehouse), returned result Microsoft.AspNetCore.Mvc.ViewResult in 0.6938ms.
+2020-06-26 22:20:22.5758|INFO|Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor|Executing ViewResult, running view Index.
+2020-06-26 22:20:22.7324|INFO|Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor|Executed ViewResult - view Index executed in 170.3055ms.
+2020-06-26 22:20:22.7476|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executed action Warehouse.Controllers.HomeController.Index (Warehouse) in 504.8329ms
+2020-06-26 22:20:22.7802|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'Warehouse.Controllers.HomeController.Index (Warehouse)'
+2020-06-26 22:20:22.8270|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 807.1094ms 200 text/html; charset=utf-8
+2020-06-26 22:20:27.2021|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/2.0 GET https://localhost:44340/Auth/Logout  
+2020-06-26 22:20:27.2256|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'Warehouse.Controllers.AuthController.Logout (Warehouse)'
+2020-06-26 22:20:27.2518|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Route matched with {action = "Logout", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Logout() on controller Warehouse.Controllers.AuthController (Warehouse).
+2020-06-26 22:20:27.2743|INFO|Microsoft.AspNetCore.Authorization.DefaultAuthorizationService|Authorization was successful.
+2020-06-26 22:20:27.2743|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executing action method Warehouse.Controllers.AuthController.Logout (Warehouse) - Validation state: Valid
+2020-06-26 22:20:27.3069|INFO|Microsoft.AspNetCore.Authentication.Cookies.CookieAuthenticationHandler|AuthenticationScheme: Identity.Application signed out.
+2020-06-26 22:20:27.3069|INFO|Microsoft.AspNetCore.Authentication.Cookies.CookieAuthenticationHandler|AuthenticationScheme: Identity.External signed out.
+2020-06-26 22:20:27.3896|INFO|Microsoft.AspNetCore.Authentication.Cookies.CookieAuthenticationHandler|AuthenticationScheme: Identity.TwoFactorUserId signed out.
+2020-06-26 22:20:27.4042|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executed action method Warehouse.Controllers.AuthController.Logout (Warehouse), returned result Microsoft.AspNetCore.Mvc.RedirectToActionResult in 110.0048ms.
+2020-06-26 22:20:27.4176|INFO|Microsoft.AspNetCore.Mvc.RedirectToActionResult|Executing RedirectResult, redirecting to /Auth/Login.
+2020-06-26 22:20:27.4176|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executed action Warehouse.Controllers.AuthController.Logout (Warehouse) in 162.0986ms
+2020-06-26 22:20:27.4368|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'Warehouse.Controllers.AuthController.Logout (Warehouse)'
+2020-06-26 22:20:27.4472|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 245.0325ms 302 
+2020-06-26 22:20:27.4472|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/2.0 GET https://localhost:44340/Auth/Login  
+2020-06-26 22:20:27.4711|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'Warehouse.Controllers.AuthController.Login (Warehouse)'
+2020-06-26 22:20:27.4934|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login(System.String) on controller Warehouse.Controllers.AuthController (Warehouse).
+2020-06-26 22:20:27.5159|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executing action method Warehouse.Controllers.AuthController.Login (Warehouse) - Validation state: Valid
+2020-06-26 22:20:27.5861|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executed action method Warehouse.Controllers.AuthController.Login (Warehouse), returned result Microsoft.AspNetCore.Mvc.NotFoundResult in 61.0507ms.
+2020-06-26 22:20:27.6059|INFO|Microsoft.AspNetCore.Mvc.StatusCodeResult|Executing HttpStatusCodeResult, setting HTTP status code 404
+2020-06-26 22:20:27.6059|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executed action Warehouse.Controllers.AuthController.Login (Warehouse) in 111.2375ms
+2020-06-26 22:20:27.6238|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'Warehouse.Controllers.AuthController.Login (Warehouse)'
+2020-06-26 22:20:27.6336|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 179.7119ms 404 
+2020-06-26 22:21:21.8535|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/2.0 GET https://localhost:44340/  
+2020-06-26 22:21:22.0408|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'Warehouse.Controllers.HomeController.Index (Warehouse)'
+2020-06-26 22:21:22.0588|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller Warehouse.Controllers.HomeController (Warehouse).
+2020-06-26 22:21:22.0740|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executing action method Warehouse.Controllers.HomeController.Index (Warehouse) - Validation state: Valid
+2020-06-26 22:21:22.0893|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executed action method Warehouse.Controllers.HomeController.Index (Warehouse), returned result Microsoft.AspNetCore.Mvc.ViewResult in 0.0729ms.
+2020-06-26 22:21:22.1030|INFO|Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor|Executing ViewResult, running view Index.
+2020-06-26 22:21:22.1231|INFO|Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor|Executed ViewResult - view Index executed in 20.3093ms.
+2020-06-26 22:21:22.2165|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executed action Warehouse.Controllers.HomeController.Index (Warehouse) in 142.9702ms
+2020-06-26 22:21:22.2385|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'Warehouse.Controllers.HomeController.Index (Warehouse)'
+2020-06-26 22:21:22.2603|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 406.9113ms 200 text/html; charset=utf-8
+2020-06-26 23:38:30.6030|INFO|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|User profile is available. Using 'C:\Users\Salome\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2020-06-26 23:38:32.8838|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/2.0 GET https://localhost:44340/  
+2020-06-26 23:38:33.2080|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'Warehouse.Controllers.HomeController.Index (Warehouse)'
+2020-06-26 23:38:33.2844|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller Warehouse.Controllers.HomeController (Warehouse).
+2020-06-26 23:38:35.1170|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executing action method Warehouse.Controllers.HomeController.Index (Warehouse) - Validation state: Valid
+2020-06-26 23:38:35.1986|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executed action method Warehouse.Controllers.HomeController.Index (Warehouse), returned result Microsoft.AspNetCore.Mvc.ViewResult in 0.6296ms.
+2020-06-26 23:38:35.2804|INFO|Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor|Executing ViewResult, running view Index.
+2020-06-26 23:38:36.1991|INFO|Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor|Executed ViewResult - view Index executed in 970.5427ms.
+2020-06-26 23:38:36.2246|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executed action Warehouse.Controllers.HomeController.Index (Warehouse) in 2930.4215ms
+2020-06-26 23:38:36.2550|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'Warehouse.Controllers.HomeController.Index (Warehouse)'
+2020-06-26 23:38:36.3461|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 3463.0042ms 200 text/html; charset=utf-8
+2020-06-26 23:38:36.5284|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/2.0 GET https://localhost:44340/css/site.css  
+2020-06-26 23:38:36.5955|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/2.0 GET https://localhost:44340/lib/bootstrap/dist/css/bootstrap.css  
+2020-06-26 23:38:36.6101|INFO|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|The file /css/site.css was not modified
+2020-06-26 23:38:36.6101|INFO|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|The file /lib/bootstrap/dist/css/bootstrap.css was not modified
+2020-06-26 23:38:36.6343|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 106.1158ms 304 text/css
+2020-06-26 23:38:36.6343|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 51.9201ms 304 text/css
+2020-06-26 23:38:36.6643|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/2.0 GET https://localhost:44340/js/site.js?v=4q1jwFhaPaZgr8WAUSrux6hAuh0XDg9kPS3xIVq36I0  
+2020-06-26 23:38:36.6643|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/2.0 GET https://localhost:44340/lib/jquery/dist/jquery.js  
+2020-06-26 23:38:36.6974|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/2.0 GET https://localhost:44340/lib/bootstrap/dist/js/bootstrap.bundle.js  
+2020-06-26 23:38:36.7161|INFO|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|The file /js/site.js was not modified
+2020-06-26 23:38:36.7357|INFO|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|The file /lib/jquery/dist/jquery.js was not modified
+2020-06-26 23:38:36.7570|INFO|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|The file /lib/bootstrap/dist/js/bootstrap.bundle.js was not modified
+2020-06-26 23:38:36.7795|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 115.1274ms 304 application/javascript
+2020-06-26 23:38:36.8017|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 137.3108ms 304 application/javascript
+2020-06-26 23:38:36.8189|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 121.5566ms 304 application/javascript
+2020-06-26 23:39:03.8625|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/2.0 GET https://localhost:44340/Auth/Login  
+2020-06-26 23:39:03.8774|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'Warehouse.Controllers.AuthController.Login (Warehouse)'
+2020-06-26 23:39:04.4904|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login(System.String) on controller Warehouse.Controllers.AuthController (Warehouse).
+2020-06-26 23:39:04.6288|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executing action method Warehouse.Controllers.AuthController.Login (Warehouse) - Validation state: Valid
+2020-06-26 23:39:04.8460|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executed action method Warehouse.Controllers.AuthController.Login (Warehouse), returned result Microsoft.AspNetCore.Mvc.ViewResult in 207.788ms.
+2020-06-26 23:39:04.9086|INFO|Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor|Executing ViewResult, running view Login.
+2020-06-26 23:39:05.1214|INFO|Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor|Executed ViewResult - view Login executed in 264.9873ms.
+2020-06-26 23:39:05.1723|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executed action Warehouse.Controllers.AuthController.Login (Warehouse) in 667.9696ms
+2020-06-26 23:39:05.1810|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'Warehouse.Controllers.AuthController.Login (Warehouse)'
+2020-06-26 23:39:05.1810|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 1327.8732ms 200 text/html; charset=utf-8
+2020-06-26 23:39:14.6592|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/2.0 POST https://localhost:44340/Auth/Login application/x-www-form-urlencoded 232
+2020-06-26 23:39:14.6788|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'Warehouse.Controllers.AuthController.Login (Warehouse)'
+2020-06-26 23:39:14.8513|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(BLL.DTOs.Login.LoginDTO, System.String) on controller Warehouse.Controllers.AuthController (Warehouse).
+2020-06-26 23:39:15.0534|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executing action method Warehouse.Controllers.AuthController.Login (Warehouse) - Validation state: Valid
+2020-06-26 23:39:15.8989|INFO|Microsoft.EntityFrameworkCore.Infrastructure|Entity Framework Core 2.2.6-servicing-10079 initialized 'StorageDBContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2020-06-26 23:39:17.4695|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (200ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[AccessFailedCount], [u].[ConcurrencyStamp], [u].[Email], [u].[EmailConfirmed], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[PasswordHash], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[SecurityStamp], [u].[TwoFactorEnabled], [u].[UserName]
+FROM [AspNetUsers] AS [u]
+WHERE [u].[NormalizedEmail] = @__normalizedEmail_0
+2020-06-26 23:39:17.5621|INFO|Microsoft.AspNetCore.Authentication.Cookies.CookieAuthenticationHandler|AuthenticationScheme: Identity.Application signed out.
+2020-06-26 23:39:17.5715|INFO|Microsoft.AspNetCore.Authentication.Cookies.CookieAuthenticationHandler|AuthenticationScheme: Identity.External signed out.
+2020-06-26 23:39:17.5715|INFO|Microsoft.AspNetCore.Authentication.Cookies.CookieAuthenticationHandler|AuthenticationScheme: Identity.TwoFactorUserId signed out.
+2020-06-26 23:39:17.7125|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (4ms) [Parameters=[@__user_Id_0='?' (Size = 450)], CommandType='Text', CommandTimeout='30']
+SELECT [uc].[Id], [uc].[ClaimType], [uc].[ClaimValue], [uc].[UserId]
+FROM [AspNetUserClaims] AS [uc]
+WHERE [uc].[UserId] = @__user_Id_0
+2020-06-26 23:39:17.7641|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (6ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='Text', CommandTimeout='30']
+SELECT [role].[Name]
+FROM [AspNetUserRoles] AS [userRole]
+INNER JOIN [AspNetRoles] AS [role] ON [userRole].[RoleId] = [role].[Id]
+WHERE [userRole].[UserId] = @__userId_0
+2020-06-26 23:39:17.7889|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (2ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [r].[Id], [r].[ConcurrencyStamp], [r].[Name], [r].[NormalizedName]
+FROM [AspNetRoles] AS [r]
+WHERE [r].[NormalizedName] = @__normalizedName_0
+2020-06-26 23:39:17.8167|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (2ms) [Parameters=[@__role_Id_0='?' (Size = 450)], CommandType='Text', CommandTimeout='30']
+SELECT [rc].[ClaimType], [rc].[ClaimValue]
+FROM [AspNetRoleClaims] AS [rc]
+WHERE [rc].[RoleId] = @__role_Id_0
+2020-06-26 23:39:17.8360|INFO|Microsoft.AspNetCore.Authentication.Cookies.CookieAuthenticationHandler|AuthenticationScheme: Identity.Application signed in.
+2020-06-26 23:39:17.8489|INFO|Warehouse.Controllers.AuthController|The Admin Signed In
+2020-06-26 23:39:17.8610|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executed action method Warehouse.Controllers.AuthController.Login (Warehouse), returned result Microsoft.AspNetCore.Mvc.RedirectResult in 2796.9087ms.
+2020-06-26 23:39:17.8752|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.RedirectResultExecutor|Executing RedirectResult, redirecting to /.
+2020-06-26 23:39:17.8874|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executed action Warehouse.Controllers.AuthController.Login (Warehouse) in 3019.845ms
+2020-06-26 23:39:17.8874|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'Warehouse.Controllers.AuthController.Login (Warehouse)'
+2020-06-26 23:39:17.9110|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 3252.0852ms 302 
+2020-06-26 23:39:17.9737|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/2.0 GET https://localhost:44340/  
+2020-06-26 23:39:17.9993|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'Warehouse.Controllers.HomeController.Index (Warehouse)'
+2020-06-26 23:39:18.0128|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller Warehouse.Controllers.HomeController (Warehouse).
+2020-06-26 23:39:18.0128|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executing action method Warehouse.Controllers.HomeController.Index (Warehouse) - Validation state: Valid
+2020-06-26 23:39:18.0390|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executed action method Warehouse.Controllers.HomeController.Index (Warehouse), returned result Microsoft.AspNetCore.Mvc.ViewResult in 0.0885ms.
+2020-06-26 23:39:18.0390|INFO|Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor|Executing ViewResult, running view Index.
+2020-06-26 23:39:18.0667|INFO|Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor|Executed ViewResult - view Index executed in 14.2816ms.
+2020-06-26 23:39:18.0805|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executed action Warehouse.Controllers.HomeController.Index (Warehouse) in 57.0334ms
+2020-06-26 23:39:18.0897|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'Warehouse.Controllers.HomeController.Index (Warehouse)'
+2020-06-26 23:39:18.0897|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 125.5733ms 200 text/html; charset=utf-8
+2020-06-26 23:39:20.3488|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/2.0 GET https://localhost:44340/Product/ProductList  
+2020-06-26 23:39:20.3613|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'Warehouse.Controllers.ProductController.ProductList (Warehouse)'
+2020-06-26 23:39:20.3819|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Route matched with {action = "ProductList", controller = "Product"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult ProductList(System.Nullable`1[System.Int32]) on controller Warehouse.Controllers.ProductController (Warehouse).
+2020-06-26 23:39:20.4029|INFO|Microsoft.AspNetCore.Authorization.DefaultAuthorizationService|Authorization was successful.
+2020-06-26 23:39:20.4201|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executing action method Warehouse.Controllers.ProductController.ProductList (Warehouse) - Validation state: Valid
+2020-06-26 23:39:20.4670|INFO|Microsoft.EntityFrameworkCore.Infrastructure|Entity Framework Core 2.2.6-servicing-10079 initialized 'StorageDBContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2020-06-26 23:39:20.5558|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (47ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [p].[Id], [p].[Manufacturer], [p].[Name], [p].[Thumb]
+FROM [Products] AS [p]
+2020-06-26 23:39:20.5972|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executed action method Warehouse.Controllers.ProductController.ProductList (Warehouse), returned result Microsoft.AspNetCore.Mvc.ViewResult in 164.0691ms.
+2020-06-26 23:39:20.6888|INFO|Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor|Executing ViewResult, running view ProductList.
+2020-06-26 23:39:20.7996|INFO|Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor|Executed ViewResult - view ProductList executed in 189.3906ms.
+2020-06-26 23:39:20.8153|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executed action Warehouse.Controllers.ProductController.ProductList (Warehouse) in 418.4746ms
+2020-06-26 23:39:20.8310|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'Warehouse.Controllers.ProductController.ProductList (Warehouse)'
+2020-06-26 23:39:20.8443|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 495.5402ms 200 text/html; charset=utf-8
+2020-06-26 23:39:20.9065|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/2.0 GET https://localhost:44340/  
+2020-06-26 23:39:20.9221|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'Warehouse.Controllers.HomeController.Index (Warehouse)'
+2020-06-26 23:39:20.9325|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller Warehouse.Controllers.HomeController (Warehouse).
+2020-06-26 23:39:20.9325|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executing action method Warehouse.Controllers.HomeController.Index (Warehouse) - Validation state: Valid
+2020-06-26 23:39:20.9517|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executed action method Warehouse.Controllers.HomeController.Index (Warehouse), returned result Microsoft.AspNetCore.Mvc.ViewResult in 0.0237ms.
+2020-06-26 23:39:20.9645|INFO|Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor|Executing ViewResult, running view Index.
+2020-06-26 23:39:20.9645|INFO|Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor|Executed ViewResult - view Index executed in 11.7885ms.
+2020-06-26 23:39:20.9873|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executed action Warehouse.Controllers.HomeController.Index (Warehouse) in 45.242ms
+2020-06-26 23:39:21.0003|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'Warehouse.Controllers.HomeController.Index (Warehouse)'
+2020-06-26 23:39:21.0153|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 108.843ms 200 text/html; charset=utf-8
+2020-06-26 23:39:24.7401|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/2.0 GET https://localhost:44340/Product/Add  
+2020-06-26 23:39:24.7588|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'Warehouse.Controllers.ProductController.Add (Warehouse)'
+2020-06-26 23:39:24.7777|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Route matched with {action = "Add", controller = "Product"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Add() on controller Warehouse.Controllers.ProductController (Warehouse).
+2020-06-26 23:39:24.7952|INFO|Microsoft.AspNetCore.Authorization.DefaultAuthorizationService|Authorization was successful.
+2020-06-26 23:39:24.8156|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executing action method Warehouse.Controllers.ProductController.Add (Warehouse) - Validation state: Valid
+2020-06-26 23:39:24.8294|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executed action method Warehouse.Controllers.ProductController.Add (Warehouse), returned result Microsoft.AspNetCore.Mvc.ViewResult in 0.4371ms.
+2020-06-26 23:39:24.8476|INFO|Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor|Executing ViewResult, running view Add.
+2020-06-26 23:39:25.0012|INFO|Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor|Executed ViewResult - view Add executed in 156.3728ms.
+2020-06-26 23:39:25.0189|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executed action Warehouse.Controllers.ProductController.Add (Warehouse) in 224.0778ms
+2020-06-26 23:39:25.0430|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'Warehouse.Controllers.ProductController.Add (Warehouse)'
+2020-06-26 23:39:25.0588|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 318.7446ms 200 text/html; charset=utf-8
+2020-06-26 23:39:32.0908|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/2.0 POST https://localhost:44340/Product/Add multipart/form-data; boundary=----WebKitFormBoundarysSp6cdCSqS6x8NRx 727
+2020-06-26 23:39:32.1225|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'Warehouse.Controllers.ProductController.Add (Warehouse)'
+2020-06-26 23:39:32.1507|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Route matched with {action = "Add", controller = "Product"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Add(Warehouse.Models.ProductFormVM) on controller Warehouse.Controllers.ProductController (Warehouse).
+2020-06-26 23:39:32.1730|INFO|Microsoft.AspNetCore.Authorization.DefaultAuthorizationService|Authorization was successful.
+2020-06-26 23:39:32.4542|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executing action method Warehouse.Controllers.ProductController.Add (Warehouse) - Validation state: Valid
+2020-06-26 23:39:32.5027|INFO|Microsoft.EntityFrameworkCore.Infrastructure|Entity Framework Core 2.2.6-servicing-10079 initialized 'StorageDBContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2020-06-26 23:39:32.7502|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (173ms) [Parameters=[@p0='?' (Size = 100), @p1='?' (Size = 100), @p2='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [Products] ([Manufacturer], [Name], [Thumb])
+VALUES (@p0, @p1, @p2);
+SELECT [Id]
+FROM [Products]
+WHERE @@ROWCOUNT = 1 AND [Id] = scope_identity();
+2020-06-26 23:39:32.7807|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executed action method Warehouse.Controllers.ProductController.Add (Warehouse), returned result Microsoft.AspNetCore.Mvc.RedirectToActionResult in 287.4149ms.
+2020-06-26 23:39:32.7985|INFO|Microsoft.AspNetCore.Mvc.RedirectToActionResult|Executing RedirectResult, redirecting to /Product/ProductList.
+2020-06-26 23:39:32.8126|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executed action Warehouse.Controllers.ProductController.Add (Warehouse) in 639.6757ms
+2020-06-26 23:39:32.8286|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'Warehouse.Controllers.ProductController.Add (Warehouse)'
+2020-06-26 23:39:32.8425|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 751.8146ms 302 
+2020-06-26 23:39:32.8425|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/2.0 GET https://localhost:44340/Product/ProductList  
+2020-06-26 23:39:32.8799|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'Warehouse.Controllers.ProductController.ProductList (Warehouse)'
+2020-06-26 23:39:32.8954|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Route matched with {action = "ProductList", controller = "Product"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult ProductList(System.Nullable`1[System.Int32]) on controller Warehouse.Controllers.ProductController (Warehouse).
+2020-06-26 23:39:32.9107|INFO|Microsoft.AspNetCore.Authorization.DefaultAuthorizationService|Authorization was successful.
+2020-06-26 23:39:32.9290|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executing action method Warehouse.Controllers.ProductController.ProductList (Warehouse) - Validation state: Valid
+2020-06-26 23:39:32.9478|INFO|Microsoft.EntityFrameworkCore.Infrastructure|Entity Framework Core 2.2.6-servicing-10079 initialized 'StorageDBContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2020-06-26 23:39:32.9675|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (3ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [p].[Id], [p].[Manufacturer], [p].[Name], [p].[Thumb]
+FROM [Products] AS [p]
+2020-06-26 23:39:32.9793|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executed action method Warehouse.Controllers.ProductController.ProductList (Warehouse), returned result Microsoft.AspNetCore.Mvc.ViewResult in 32.5166ms.
+2020-06-26 23:39:32.9920|INFO|Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor|Executing ViewResult, running view ProductList.
+2020-06-26 23:39:32.9920|INFO|Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor|Executed ViewResult - view ProductList executed in 13.9952ms.
+2020-06-26 23:39:33.0231|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executed action Warehouse.Controllers.ProductController.ProductList (Warehouse) in 112.4156ms
+2020-06-26 23:39:33.0412|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/2.0 GET https://localhost:44340/  
+2020-06-26 23:39:33.0412|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'Warehouse.Controllers.ProductController.ProductList (Warehouse)'
+2020-06-26 23:39:33.0708|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'Warehouse.Controllers.HomeController.Index (Warehouse)'
+2020-06-26 23:39:33.0708|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 234.2436ms 200 text/html; charset=utf-8
+2020-06-26 23:39:33.0981|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller Warehouse.Controllers.HomeController (Warehouse).
+2020-06-26 23:39:33.1437|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executing action method Warehouse.Controllers.HomeController.Index (Warehouse) - Validation state: Valid
+2020-06-26 23:39:33.1625|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executed action method Warehouse.Controllers.HomeController.Index (Warehouse), returned result Microsoft.AspNetCore.Mvc.ViewResult in 0.0421ms.
+2020-06-26 23:39:33.1778|INFO|Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor|Executing ViewResult, running view Index.
+2020-06-26 23:39:33.1994|INFO|Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor|Executed ViewResult - view Index executed in 21.5523ms.
+2020-06-26 23:39:33.2292|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executed action Warehouse.Controllers.HomeController.Index (Warehouse) in 85.6233ms
+2020-06-26 23:39:33.2521|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'Warehouse.Controllers.HomeController.Index (Warehouse)'
+2020-06-26 23:39:33.2751|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 233.8952ms 200 text/html; charset=utf-8
+2020-06-26 23:39:43.8178|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/2.0 GET https://localhost:44340/Product/Delete/2  
+2020-06-26 23:39:43.8353|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'Warehouse.Controllers.ProductController.Delete (Warehouse)'
+2020-06-26 23:39:43.8560|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Route matched with {action = "Delete", controller = "Product"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Delete(Int32) on controller Warehouse.Controllers.ProductController (Warehouse).
+2020-06-26 23:39:43.8923|INFO|Microsoft.AspNetCore.Authorization.DefaultAuthorizationService|Authorization was successful.
+2020-06-26 23:39:43.9094|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executing action method Warehouse.Controllers.ProductController.Delete (Warehouse) - Validation state: Valid
+2020-06-26 23:39:43.9213|INFO|Microsoft.EntityFrameworkCore.Infrastructure|Entity Framework Core 2.2.6-servicing-10079 initialized 'StorageDBContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2020-06-26 23:39:43.9453|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (1ms) [Parameters=[@__get_Item_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [e].[Id], [e].[Manufacturer], [e].[Name], [e].[Thumb]
+FROM [Products] AS [e]
+WHERE [e].[Id] = @__get_Item_0
+2020-06-26 23:39:44.0659|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executed action Warehouse.Controllers.ProductController.Delete (Warehouse) in 173.5591ms
+2020-06-26 23:39:44.1166|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'Warehouse.Controllers.ProductController.Delete (Warehouse)'
+2020-06-26 23:39:44.6007|ERROR|Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware|An unhandled exception has occurred while executing the request.
+2020-06-26 23:39:45.1077|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 1289.886ms 500 text/html; charset=utf-8
+2020-06-26 23:40:31.0950|INFO|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|User profile is available. Using 'C:\Users\Salome\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2020-06-26 23:40:31.8164|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/2.0 GET https://localhost:44340/  
+2020-06-26 23:40:32.2395|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'Warehouse.Controllers.HomeController.Index (Warehouse)'
+2020-06-26 23:40:32.2938|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller Warehouse.Controllers.HomeController (Warehouse).
+2020-06-26 23:40:32.9148|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executing action method Warehouse.Controllers.HomeController.Index (Warehouse) - Validation state: Valid
+2020-06-26 23:40:32.9855|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executed action method Warehouse.Controllers.HomeController.Index (Warehouse), returned result Microsoft.AspNetCore.Mvc.ViewResult in 1.0096ms.
+2020-06-26 23:40:33.2154|INFO|Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor|Executing ViewResult, running view Index.
+2020-06-26 23:40:33.7398|INFO|Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor|Executed ViewResult - view Index executed in 566.3948ms.
+2020-06-26 23:40:33.7688|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executed action Warehouse.Controllers.HomeController.Index (Warehouse) in 1454.8254ms
+2020-06-26 23:40:33.7919|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'Warehouse.Controllers.HomeController.Index (Warehouse)'
+2020-06-26 23:40:33.8247|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 2010.3738ms 200 text/html; charset=utf-8
+2020-06-26 23:40:38.8014|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/2.0 GET https://localhost:44340/Product/ProductList  
+2020-06-26 23:40:38.8271|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'Warehouse.Controllers.ProductController.ProductList (Warehouse)'
+2020-06-26 23:40:38.8753|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Route matched with {action = "ProductList", controller = "Product"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult ProductList(System.Nullable`1[System.Int32]) on controller Warehouse.Controllers.ProductController (Warehouse).
+2020-06-26 23:40:38.9048|INFO|Microsoft.AspNetCore.Authorization.DefaultAuthorizationService|Authorization was successful.
+2020-06-26 23:40:38.9325|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executing action method Warehouse.Controllers.ProductController.ProductList (Warehouse) - Validation state: Valid
+2020-06-26 23:40:39.1926|INFO|Microsoft.EntityFrameworkCore.Infrastructure|Entity Framework Core 2.2.6-servicing-10079 initialized 'StorageDBContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2020-06-26 23:40:40.9974|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (270ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [p].[Id], [p].[Manufacturer], [p].[Name], [p].[Thumb]
+FROM [Products] AS [p]
+2020-06-26 23:40:41.0424|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executed action method Warehouse.Controllers.ProductController.ProductList (Warehouse), returned result Microsoft.AspNetCore.Mvc.ViewResult in 2099.9309ms.
+2020-06-26 23:40:41.0648|INFO|Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor|Executing ViewResult, running view ProductList.
+2020-06-26 23:40:41.1476|INFO|Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor|Executed ViewResult - view ProductList executed in 87.5562ms.
+2020-06-26 23:40:41.1660|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executed action Warehouse.Controllers.ProductController.ProductList (Warehouse) in 2275.1247ms
+2020-06-26 23:40:41.1660|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'Warehouse.Controllers.ProductController.ProductList (Warehouse)'
+2020-06-26 23:40:41.1911|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 2390.4468ms 200 text/html; charset=utf-8
+2020-06-26 23:40:41.2390|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/2.0 GET https://localhost:44340/  
+2020-06-26 23:40:41.2990|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'Warehouse.Controllers.HomeController.Index (Warehouse)'
+2020-06-26 23:40:41.3146|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller Warehouse.Controllers.HomeController (Warehouse).
+2020-06-26 23:40:41.3251|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executing action method Warehouse.Controllers.HomeController.Index (Warehouse) - Validation state: Valid
+2020-06-26 23:40:41.3397|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executed action method Warehouse.Controllers.HomeController.Index (Warehouse), returned result Microsoft.AspNetCore.Mvc.ViewResult in 0.0385ms.
+2020-06-26 23:40:41.3519|INFO|Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor|Executing ViewResult, running view Index.
+2020-06-26 23:40:41.3673|INFO|Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor|Executed ViewResult - view Index executed in 15.4217ms.
+2020-06-26 23:40:41.3904|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executed action Warehouse.Controllers.HomeController.Index (Warehouse) in 65.4257ms
+2020-06-26 23:40:41.4048|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'Warehouse.Controllers.HomeController.Index (Warehouse)'
+2020-06-26 23:40:41.4195|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 180.6203ms 200 text/html; charset=utf-8
+2020-06-26 23:40:43.5716|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/2.0 GET https://localhost:44340/Product/Delete/2  
+2020-06-26 23:40:43.5909|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'Warehouse.Controllers.ProductController.Delete (Warehouse)'
+2020-06-26 23:40:43.6050|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Route matched with {action = "Delete", controller = "Product"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Delete(Int32) on controller Warehouse.Controllers.ProductController (Warehouse).
+2020-06-26 23:40:43.6177|INFO|Microsoft.AspNetCore.Authorization.DefaultAuthorizationService|Authorization was successful.
+2020-06-26 23:40:43.6177|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executing action method Warehouse.Controllers.ProductController.Delete (Warehouse) - Validation state: Valid
+2020-06-26 23:40:43.6465|INFO|Microsoft.EntityFrameworkCore.Infrastructure|Entity Framework Core 2.2.6-servicing-10079 initialized 'StorageDBContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2020-06-26 23:40:45.3291|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (28ms) [Parameters=[@__Id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [x].[Id], [x].[Manufacturer], [x].[Name], [x].[Thumb]
+FROM [Products] AS [x]
+WHERE [x].[Id] = @__Id_0
+ORDER BY [x].[Id]
+2020-06-26 23:40:45.4064|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (52ms) [Parameters=[@__Id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT [x.Shops].[Id], [x.Shops].[BarCode], [x.Shops].[Price], [x.Shops].[ProductId], [x.Shops].[ShopId]
+FROM [ProductShops] AS [x.Shops]
+INNER JOIN (
+    SELECT TOP(1) [x0].[Id]
+    FROM [Products] AS [x0]
+    WHERE [x0].[Id] = @__Id_0
+    ORDER BY [x0].[Id]
+) AS [t] ON [x.Shops].[ProductId] = [t].[Id]
+ORDER BY [t].[Id]
+2020-06-26 23:40:45.5807|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (94ms) [Parameters=[@p0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SET NOCOUNT ON;
+DELETE FROM [Products]
+WHERE [Id] = @p0;
+SELECT @@ROWCOUNT;
+2020-06-26 23:40:45.6155|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executed action method Warehouse.Controllers.ProductController.Delete (Warehouse), returned result Microsoft.AspNetCore.Mvc.RedirectToActionResult in 1973.8506ms.
+2020-06-26 23:40:45.6270|INFO|Microsoft.AspNetCore.Mvc.RedirectToActionResult|Executing RedirectResult, redirecting to /Product/ProductList.
+2020-06-26 23:40:45.6369|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executed action Warehouse.Controllers.ProductController.Delete (Warehouse) in 2019.576ms
+2020-06-26 23:40:45.6369|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'Warehouse.Controllers.ProductController.Delete (Warehouse)'
+2020-06-26 23:40:45.6647|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 2093.0289ms 302 
+2020-06-26 23:40:45.6647|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/2.0 GET https://localhost:44340/Product/ProductList  
+2020-06-26 23:40:45.6948|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'Warehouse.Controllers.ProductController.ProductList (Warehouse)'
+2020-06-26 23:40:45.7068|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Route matched with {action = "ProductList", controller = "Product"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult ProductList(System.Nullable`1[System.Int32]) on controller Warehouse.Controllers.ProductController (Warehouse).
+2020-06-26 23:40:45.8318|INFO|Microsoft.AspNetCore.Authorization.DefaultAuthorizationService|Authorization was successful.
+2020-06-26 23:40:45.8441|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executing action method Warehouse.Controllers.ProductController.ProductList (Warehouse) - Validation state: Valid
+2020-06-26 23:40:45.8548|INFO|Microsoft.EntityFrameworkCore.Infrastructure|Entity Framework Core 2.2.6-servicing-10079 initialized 'StorageDBContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2020-06-26 23:40:45.8548|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [p].[Id], [p].[Manufacturer], [p].[Name], [p].[Thumb]
+FROM [Products] AS [p]
+2020-06-26 23:40:45.8769|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executed action method Warehouse.Controllers.ProductController.ProductList (Warehouse), returned result Microsoft.AspNetCore.Mvc.ViewResult in 22.4298ms.
+2020-06-26 23:40:45.8863|INFO|Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor|Executing ViewResult, running view ProductList.
+2020-06-26 23:40:45.8863|INFO|Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor|Executed ViewResult - view ProductList executed in 11.8822ms.
+2020-06-26 23:40:45.9157|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executed action Warehouse.Controllers.ProductController.ProductList (Warehouse) in 84.021ms
+2020-06-26 23:40:45.9393|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'Warehouse.Controllers.ProductController.ProductList (Warehouse)'
+2020-06-26 23:40:45.9157|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/2.0 GET https://localhost:44340/  
+2020-06-26 23:40:45.9556|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 284.3318ms 200 text/html; charset=utf-8
+2020-06-26 23:40:45.9704|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'Warehouse.Controllers.HomeController.Index (Warehouse)'
+2020-06-26 23:40:45.9978|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller Warehouse.Controllers.HomeController (Warehouse).
+2020-06-26 23:40:46.0196|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executing action method Warehouse.Controllers.HomeController.Index (Warehouse) - Validation state: Valid
+2020-06-26 23:40:46.0309|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executed action method Warehouse.Controllers.HomeController.Index (Warehouse), returned result Microsoft.AspNetCore.Mvc.ViewResult in 0.0219ms.
+2020-06-26 23:40:46.0407|INFO|Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor|Executing ViewResult, running view Index.
+2020-06-26 23:40:46.0407|INFO|Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor|Executed ViewResult - view Index executed in 12.1798ms.
+2020-06-26 23:40:46.0707|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executed action Warehouse.Controllers.HomeController.Index (Warehouse) in 51.1836ms
+2020-06-26 23:40:46.0707|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'Warehouse.Controllers.HomeController.Index (Warehouse)'
+2020-06-26 23:40:46.0938|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 169.5668ms 200 text/html; charset=utf-8
+2020-06-26 23:40:50.7058|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/2.0 GET https://localhost:44340/Shop/ShopList  
+2020-06-26 23:40:50.7175|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'Warehouse.Controllers.ShopController.ShopList (Warehouse)'
+2020-06-26 23:40:50.7369|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Route matched with {action = "ShopList", controller = "Shop"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult ShopList(System.Nullable`1[System.Int32]) on controller Warehouse.Controllers.ShopController (Warehouse).
+2020-06-26 23:40:50.7535|INFO|Microsoft.AspNetCore.Authorization.DefaultAuthorizationService|Authorization was successful.
+2020-06-26 23:40:50.7690|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executing action method Warehouse.Controllers.ShopController.ShopList (Warehouse) - Validation state: Valid
+2020-06-26 23:40:50.7886|INFO|Microsoft.EntityFrameworkCore.Infrastructure|Entity Framework Core 2.2.6-servicing-10079 initialized 'StorageDBContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2020-06-26 23:40:51.1489|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (148ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [x].[Id], [x].[Address], [x].[Name], [x].[TypeId], [x.Type].[Id], [x.Type].[Name]
+FROM [Shops] AS [x]
+INNER JOIN [ShopTypes] AS [x.Type] ON [x].[TypeId] = [x.Type].[Id]
+2020-06-26 23:40:51.1950|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executed action method Warehouse.Controllers.ShopController.ShopList (Warehouse), returned result Microsoft.AspNetCore.Mvc.ViewResult in 410.1526ms.
+2020-06-26 23:40:51.2747|INFO|Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor|Executing ViewResult, running view ShopList.
+2020-06-26 23:40:51.5463|INFO|Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor|Executed ViewResult - view ShopList executed in 340.2104ms.
+2020-06-26 23:40:51.5607|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executed action Warehouse.Controllers.ShopController.ShopList (Warehouse) in 807.3708ms
+2020-06-26 23:40:51.5762|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'Warehouse.Controllers.ShopController.ShopList (Warehouse)'
+2020-06-26 23:40:51.5959|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 890.1731ms 200 text/html; charset=utf-8
+2020-06-26 23:40:52.9492|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/2.0 GET https://localhost:44340/Shop/Add  
+2020-06-26 23:40:52.9741|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'Warehouse.Controllers.ShopController.Add (Warehouse)'
+2020-06-26 23:40:52.9882|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Route matched with {action = "Add", controller = "Shop"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Add() on controller Warehouse.Controllers.ShopController (Warehouse).
+2020-06-26 23:40:53.0083|INFO|Microsoft.AspNetCore.Authorization.DefaultAuthorizationService|Authorization was successful.
+2020-06-26 23:40:53.0260|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executing action method Warehouse.Controllers.ShopController.Add (Warehouse) - Validation state: Valid
+2020-06-26 23:40:53.0428|INFO|Microsoft.EntityFrameworkCore.Infrastructure|Entity Framework Core 2.2.6-servicing-10079 initialized 'StorageDBContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2020-06-26 23:40:53.2169|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (149ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [s].[Id], [s].[Name]
+FROM [ShopTypes] AS [s]
+2020-06-26 23:40:53.2551|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [p].[Id], [p].[Manufacturer], [p].[Name], [p].[Thumb]
+FROM [Products] AS [p]
+2020-06-26 23:40:53.2677|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executed action method Warehouse.Controllers.ShopController.Add (Warehouse), returned result Microsoft.AspNetCore.Mvc.ViewResult in 227.5263ms.
+2020-06-26 23:40:53.2806|INFO|Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor|Executing ViewResult, running view Add.
+2020-06-26 23:40:53.8844|INFO|Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor|Executed ViewResult - view Add executed in 606.2562ms.
+2020-06-26 23:40:53.9032|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executed action Warehouse.Controllers.ShopController.Add (Warehouse) in 894.9303ms
+2020-06-26 23:40:53.9272|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'Warehouse.Controllers.ShopController.Add (Warehouse)'
+2020-06-26 23:40:53.9415|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 992.3782ms 200 text/html; charset=utf-8
+2020-06-26 23:41:00.1251|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/2.0 POST https://localhost:44340/Shop/Add application/x-www-form-urlencoded 280
+2020-06-26 23:41:00.9361|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'Warehouse.Controllers.ShopController.Add (Warehouse)'
+2020-06-26 23:41:00.9687|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Route matched with {action = "Add", controller = "Shop"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Add(Warehouse.Models.ShopFormVM) on controller Warehouse.Controllers.ShopController (Warehouse).
+2020-06-26 23:41:00.9840|INFO|Microsoft.AspNetCore.Authorization.DefaultAuthorizationService|Authorization was successful.
+2020-06-26 23:41:01.1221|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executing action method Warehouse.Controllers.ShopController.Add (Warehouse) - Validation state: Valid
+2020-06-26 23:41:01.1542|INFO|Microsoft.EntityFrameworkCore.Infrastructure|Entity Framework Core 2.2.6-servicing-10079 initialized 'StorageDBContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2020-06-26 23:41:01.2609|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (71ms) [Parameters=[@p0='?' (Size = 200), @p1='?' (Size = 100), @p2='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [Shops] ([Address], [Name], [TypeId])
+VALUES (@p0, @p1, @p2);
+SELECT [Id]
+FROM [Shops]
+WHERE @@ROWCOUNT = 1 AND [Id] = scope_identity();
+2020-06-26 23:41:01.2787|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executed action method Warehouse.Controllers.ShopController.Add (Warehouse), returned result Microsoft.AspNetCore.Mvc.RedirectToActionResult in 138.8118ms.
+2020-06-26 23:41:01.2893|INFO|Microsoft.AspNetCore.Mvc.RedirectToActionResult|Executing RedirectResult, redirecting to /Shop/ShopList.
+2020-06-26 23:41:01.2893|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executed action Warehouse.Controllers.ShopController.Add (Warehouse) in 316.0337ms
+2020-06-26 23:41:01.3101|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'Warehouse.Controllers.ShopController.Add (Warehouse)'
+2020-06-26 23:41:01.3101|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 1195.3971ms 302 
+2020-06-26 23:41:01.3250|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/2.0 GET https://localhost:44340/Shop/ShopList  
+2020-06-26 23:41:01.3422|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'Warehouse.Controllers.ShopController.ShopList (Warehouse)'
+2020-06-26 23:41:01.3530|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Route matched with {action = "ShopList", controller = "Shop"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult ShopList(System.Nullable`1[System.Int32]) on controller Warehouse.Controllers.ShopController (Warehouse).
+2020-06-26 23:41:01.3530|INFO|Microsoft.AspNetCore.Authorization.DefaultAuthorizationService|Authorization was successful.
+2020-06-26 23:41:01.3744|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executing action method Warehouse.Controllers.ShopController.ShopList (Warehouse) - Validation state: Valid
+2020-06-26 23:41:01.3851|INFO|Microsoft.EntityFrameworkCore.Infrastructure|Entity Framework Core 2.2.6-servicing-10079 initialized 'StorageDBContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2020-06-26 23:41:01.3851|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [x].[Id], [x].[Address], [x].[Name], [x].[TypeId], [x.Type].[Id], [x.Type].[Name]
+FROM [Shops] AS [x]
+INNER JOIN [ShopTypes] AS [x.Type] ON [x].[TypeId] = [x.Type].[Id]
+2020-06-26 23:41:01.4074|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executed action method Warehouse.Controllers.ShopController.ShopList (Warehouse), returned result Microsoft.AspNetCore.Mvc.ViewResult in 22.7593ms.
+2020-06-26 23:41:01.4173|INFO|Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor|Executing ViewResult, running view ShopList.
+2020-06-26 23:41:01.4173|INFO|Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor|Executed ViewResult - view ShopList executed in 10.492ms.
+2020-06-26 23:41:01.4428|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executed action Warehouse.Controllers.ShopController.ShopList (Warehouse) in 79.7301ms
+2020-06-26 23:41:01.4679|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'Warehouse.Controllers.ShopController.ShopList (Warehouse)'
+2020-06-26 23:41:01.4826|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 157.6668ms 200 text/html; charset=utf-8
+2020-06-26 23:41:04.9503|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/2.0 GET https://localhost:44340/Shop/Delete/2  
+2020-06-26 23:41:04.9658|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'Warehouse.Controllers.ShopController.Delete (Warehouse)'
+2020-06-26 23:41:04.9887|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Route matched with {action = "Delete", controller = "Shop"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Delete(Int32) on controller Warehouse.Controllers.ShopController (Warehouse).
+2020-06-26 23:41:05.0033|INFO|Microsoft.AspNetCore.Authorization.DefaultAuthorizationService|Authorization was successful.
+2020-06-26 23:41:05.0202|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executing action method Warehouse.Controllers.ShopController.Delete (Warehouse) - Validation state: Valid
+2020-06-26 23:41:05.0343|INFO|Microsoft.EntityFrameworkCore.Infrastructure|Entity Framework Core 2.2.6-servicing-10079 initialized 'StorageDBContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2020-06-26 23:41:05.0595|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (1ms) [Parameters=[@__get_Item_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [e].[Id], [e].[Address], [e].[Name], [e].[TypeId]
+FROM [Shops] AS [e]
+WHERE [e].[Id] = @__get_Item_0
+2020-06-26 23:41:05.0751|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executed action Warehouse.Controllers.ShopController.Delete (Warehouse) in 71.8275ms
+2020-06-26 23:41:05.0869|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'Warehouse.Controllers.ShopController.Delete (Warehouse)'
+2020-06-26 23:41:05.9981|ERROR|Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware|An unhandled exception has occurred while executing the request.
+2020-06-26 23:41:06.1807|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 1230.342ms 500 text/html; charset=utf-8
+2020-06-26 23:41:27.8739|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/2.0 GET https://localhost:44340/Shop/Edit/1  
+2020-06-26 23:41:27.8882|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'Warehouse.Controllers.ShopController.Edit (Warehouse)'
+2020-06-26 23:41:27.9269|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Route matched with {action = "Edit", controller = "Shop"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Edit(Int32) on controller Warehouse.Controllers.ShopController (Warehouse).
+2020-06-26 23:41:27.9483|INFO|Microsoft.AspNetCore.Authorization.DefaultAuthorizationService|Authorization was successful.
+2020-06-26 23:41:27.9658|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executing action method Warehouse.Controllers.ShopController.Edit (Warehouse) - Validation state: Valid
+2020-06-26 23:41:27.9838|INFO|Microsoft.EntityFrameworkCore.Infrastructure|Entity Framework Core 2.2.6-servicing-10079 initialized 'StorageDBContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2020-06-26 23:41:28.0022|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (0ms) [Parameters=[@__get_Item_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [e].[Id], [e].[Address], [e].[Name], [e].[TypeId]
+FROM [Shops] AS [e]
+WHERE [e].[Id] = @__get_Item_0
+2020-06-26 23:41:28.0173|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [s].[Id], [s].[Name]
+FROM [ShopTypes] AS [s]
+2020-06-26 23:41:28.0283|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [p].[Id], [p].[Manufacturer], [p].[Name], [p].[Thumb]
+FROM [Products] AS [p]
+2020-06-26 23:41:28.0283|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executed action method Warehouse.Controllers.ShopController.Edit (Warehouse), returned result Microsoft.AspNetCore.Mvc.ViewResult in 55.1051ms.
+2020-06-26 23:41:28.1777|INFO|Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor|Executing ViewResult, running view Edit.
+2020-06-26 23:41:28.2012|INFO|Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor|Executed ViewResult - view Edit executed in 153.3587ms.
+2020-06-26 23:41:28.2719|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executed action Warehouse.Controllers.ShopController.Edit (Warehouse) in 323.7083ms
+2020-06-26 23:41:28.2839|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'Warehouse.Controllers.ShopController.Edit (Warehouse)'
+2020-06-26 23:41:28.3025|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 428.5828ms 200 text/html; charset=utf-8
+2020-06-26 23:41:30.8481|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/2.0 POST https://localhost:44340/Shop/Edit/1 application/x-www-form-urlencoded 283
+2020-06-26 23:41:30.8649|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'Warehouse.Controllers.ShopController.Edit (Warehouse)'
+2020-06-26 23:41:30.8863|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Route matched with {action = "Edit", controller = "Shop"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Edit(Warehouse.Models.ShopFormVM) on controller Warehouse.Controllers.ShopController (Warehouse).
+2020-06-26 23:41:30.9040|INFO|Microsoft.AspNetCore.Authorization.DefaultAuthorizationService|Authorization was successful.
+2020-06-26 23:41:30.9271|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executing action method Warehouse.Controllers.ShopController.Edit (Warehouse) - Validation state: Valid
+2020-06-26 23:41:30.9450|INFO|Microsoft.EntityFrameworkCore.Infrastructure|Entity Framework Core 2.2.6-servicing-10079 initialized 'StorageDBContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2020-06-26 23:41:30.9561|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [s].[Id], [s].[Name]
+FROM [ShopTypes] AS [s]
+2020-06-26 23:41:30.9718|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [p].[Id], [p].[Manufacturer], [p].[Name], [p].[Thumb]
+FROM [Products] AS [p]
+2020-06-26 23:41:30.9855|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (0ms) [Parameters=[@__get_Item_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [e].[Id], [e].[Address], [e].[Name], [e].[TypeId]
+FROM [Shops] AS [e]
+WHERE [e].[Id] = @__get_Item_0
+2020-06-26 23:41:31.3168|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (313ms) [Parameters=[@p3='?' (DbType = Int32), @p0='?' (Size = 200), @p1='?' (Size = 100), @p2='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SET NOCOUNT ON;
+UPDATE [Shops] SET [Address] = @p0, [Name] = @p1, [TypeId] = @p2
+WHERE [Id] = @p3;
+SELECT @@ROWCOUNT;
+2020-06-26 23:41:31.3551|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executed action method Warehouse.Controllers.ShopController.Edit (Warehouse), returned result Microsoft.AspNetCore.Mvc.ViewResult in 410.757ms.
+2020-06-26 23:41:31.3794|INFO|Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor|Executing ViewResult, running view Edit.
+2020-06-26 23:41:31.3952|INFO|Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor|Executed ViewResult - view Edit executed in 15.8726ms.
+2020-06-26 23:41:31.4152|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executed action Warehouse.Controllers.ShopController.Edit (Warehouse) in 511.3532ms
+2020-06-26 23:41:31.4358|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'Warehouse.Controllers.ShopController.Edit (Warehouse)'
+2020-06-26 23:41:31.4529|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 604.8448ms 200 text/html; charset=utf-8
+2020-06-26 23:41:37.0446|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/2.0 POST https://localhost:44340/Shop/Edit/1 application/x-www-form-urlencoded 286
+2020-06-26 23:41:37.0683|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'Warehouse.Controllers.ShopController.Edit (Warehouse)'
+2020-06-26 23:41:37.0913|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Route matched with {action = "Edit", controller = "Shop"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Edit(Warehouse.Models.ShopFormVM) on controller Warehouse.Controllers.ShopController (Warehouse).
+2020-06-26 23:41:37.1087|INFO|Microsoft.AspNetCore.Authorization.DefaultAuthorizationService|Authorization was successful.
+2020-06-26 23:41:37.1247|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executing action method Warehouse.Controllers.ShopController.Edit (Warehouse) - Validation state: Valid
+2020-06-26 23:41:37.1412|INFO|Microsoft.EntityFrameworkCore.Infrastructure|Entity Framework Core 2.2.6-servicing-10079 initialized 'StorageDBContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2020-06-26 23:41:37.1582|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [s].[Id], [s].[Name]
+FROM [ShopTypes] AS [s]
+2020-06-26 23:41:37.1711|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [p].[Id], [p].[Manufacturer], [p].[Name], [p].[Thumb]
+FROM [Products] AS [p]
+2020-06-26 23:41:37.1860|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (0ms) [Parameters=[@__get_Item_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [e].[Id], [e].[Address], [e].[Name], [e].[TypeId]
+FROM [Shops] AS [e]
+WHERE [e].[Id] = @__get_Item_0
+2020-06-26 23:41:38.5443|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (1,347ms) [Parameters=[@p3='?' (DbType = Int32), @p0='?' (Size = 200), @p1='?' (Size = 100), @p2='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SET NOCOUNT ON;
+UPDATE [Shops] SET [Address] = @p0, [Name] = @p1, [TypeId] = @p2
+WHERE [Id] = @p3;
+SELECT @@ROWCOUNT;
+2020-06-26 23:41:38.6763|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executed action method Warehouse.Controllers.ShopController.Edit (Warehouse), returned result Microsoft.AspNetCore.Mvc.ViewResult in 1535.3654ms.
+2020-06-26 23:41:38.6877|INFO|Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor|Executing ViewResult, running view Edit.
+2020-06-26 23:41:38.6988|INFO|Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor|Executed ViewResult - view Edit executed in 11.2451ms.
+2020-06-26 23:41:38.7147|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executed action Warehouse.Controllers.ShopController.Edit (Warehouse) in 1606.1071ms
+2020-06-26 23:41:38.7373|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'Warehouse.Controllers.ShopController.Edit (Warehouse)'
+2020-06-26 23:41:38.7502|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 1705.6649ms 200 text/html; charset=utf-8
+2020-06-26 23:41:42.7051|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/2.0 GET https://localhost:44340/Shop/ShopList  
+2020-06-26 23:41:42.7195|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'Warehouse.Controllers.ShopController.ShopList (Warehouse)'
+2020-06-26 23:41:42.7361|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Route matched with {action = "ShopList", controller = "Shop"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult ShopList(System.Nullable`1[System.Int32]) on controller Warehouse.Controllers.ShopController (Warehouse).
+2020-06-26 23:41:42.7563|INFO|Microsoft.AspNetCore.Authorization.DefaultAuthorizationService|Authorization was successful.
+2020-06-26 23:41:42.7744|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executing action method Warehouse.Controllers.ShopController.ShopList (Warehouse) - Validation state: Valid
+2020-06-26 23:41:42.7970|INFO|Microsoft.EntityFrameworkCore.Infrastructure|Entity Framework Core 2.2.6-servicing-10079 initialized 'StorageDBContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2020-06-26 23:41:42.8204|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (3ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [x].[Id], [x].[Address], [x].[Name], [x].[TypeId], [x.Type].[Id], [x.Type].[Name]
+FROM [Shops] AS [x]
+INNER JOIN [ShopTypes] AS [x.Type] ON [x].[TypeId] = [x.Type].[Id]
+2020-06-26 23:41:42.8422|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executed action method Warehouse.Controllers.ShopController.ShopList (Warehouse), returned result Microsoft.AspNetCore.Mvc.ViewResult in 45.6327ms.
+2020-06-26 23:41:42.8578|INFO|Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor|Executing ViewResult, running view ShopList.
+2020-06-26 23:41:42.8768|INFO|Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor|Executed ViewResult - view ShopList executed in 19.0505ms.
+2020-06-26 23:41:42.8954|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executed action Warehouse.Controllers.ShopController.ShopList (Warehouse) in 139.1542ms
+2020-06-26 23:41:42.9075|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'Warehouse.Controllers.ShopController.ShopList (Warehouse)'
+2020-06-26 23:41:42.9184|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 213.3251ms 200 text/html; charset=utf-8
