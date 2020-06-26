@@ -18,6 +18,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Services.Interfaces;
 using Services.Repositories;
+using Warehouse.Helper;
 
 namespace Warehouse
 {
@@ -69,7 +70,7 @@ namespace Warehouse
                 // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
                 app.UseHsts();
             }
-
+            app.UseMiddleware<ResponseEditMiddleware>();
             app.UseAuthentication();
             app.UseHttpsRedirection();
             app.UseStaticFiles();

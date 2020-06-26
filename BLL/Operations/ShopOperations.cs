@@ -30,8 +30,14 @@ namespace BLL.Operations
         public void Delete(int Id)
         {
             Shop dbModel = services.Shop.Get(Id);
-            services.Shop.Delete(dbModel);
-            services.Commit();
+            if (dbModel == null)
+            {
+                throw new Exception("Object not found");
+            }
+            if (dbModel.Products.Count == 0) { 
+                services.Shop.Delete(dbModel);
+                services.Commit();
+            }
         }
 
         public void Edit(ShopFormDTO model)

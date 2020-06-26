@@ -35,8 +35,10 @@ namespace BLL.Operations
             {
                 throw new Exception("Object not found");
             }
-            services.Product.Delete(dbModel);
-            services.Commit();
+            if (dbModel.Shops.Count == 0) { 
+                services.Product.Delete(dbModel);
+                services.Commit();
+            }
         }
 
         public void Edit(ProductFormDTO model)
